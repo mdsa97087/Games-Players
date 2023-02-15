@@ -1,28 +1,36 @@
-// GetData();
+GetData();
 async function GetData() {
   try {
     let res = await fetch(`https://www.balldontlie.io/api/v1/players`);
     let data = await res.json();
-    let allData=data.data
-    console.log(allData);
-    ShowData(allData);
+    data = data.data;
+    console.log(data);
+    ShowData(data);
   } catch (err) {
     console.log(err);
   }
 }
-// console.log("hello")
 
-function ShowData(allData) {
-  let container = (document.getElementById("container"));
-  container.innerHTML=null
-  allData.forEach((el,i) => {
+function ShowData(data) {
+  let container = document.getElementById("container");
+  container.innerHTML = null;
+  data.forEach((el, i) => {
     let div = document.createElement("div");
-    let name = document.createElement("p");
-    name.innerText = el.first_name;
+    div.setAttribute("class", "middleDiv");
+       let imgSrc =
+      "https://images.pexels.com/photos/9002742/pexels-photo-9002742.jpeg?auto=compress&cs=tinysrgb&w=600";
+    let img = document.createElement("img");
+    img.src = `${imgSrc}`;
+    img.setAttribute('class','img')
+    let name = document.createElement("h3");
+    name.innerText =`Name:- ${el.first_name}`;
     let position = document.createElement("p");
-    position.innerText = el.position;
-    div.append(name, position);
+    position.innerText =`Position:-  ${el.position}`;
+    let btn=document.createElement('button')
+    btn.innerText='TEAM DETAILS'
+    btn.setAttribute('class','btn')
+    div.append(img,name, position,btn );
     container.append(div);
   });
 }
-ShowData()
+ShowData();

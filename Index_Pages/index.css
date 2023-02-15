@@ -10,3 +10,32 @@
       width: 800px;
       font-size: large;
 }
+#container{
+      border: 1px solid blue;
+      display: flex;
+      flex-wrap: wrap;
+      width: 1000px;
+      margin:100px auto;
+      gap: 25px;
+      justify-content: center;
+}
+.middleDiv{
+      border: 1px solid;
+      width: 200px;
+      text-align: center;
+      border-radius: 15px;
+      padding: 10px;
+}
+.img{
+      width: 120px;
+      border-radius: 30%;
+}
+.btn{
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: 600px;
+      border-radius: 10px;
+      border: navajowhite;
+      background-color: aqua;
+      color: red;
+}
