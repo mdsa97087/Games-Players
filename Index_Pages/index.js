@@ -32,6 +32,10 @@ function ShowData(data) {
     let btn = document.createElement("button");
     btn.innerText = "TEAM DETAILS";
     btn.setAttribute("class", "btn");
+    btn.addEventListener('click', function () {
+      localStorage.setItem('Player',JSON.stringify(data[i]))
+      window.location.href='../Games_Pages/Games.html'
+    })
     div.append(img, name, position, btn);
     container.append(div);
   });
