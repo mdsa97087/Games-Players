@@ -1,7 +1,7 @@
 GetData();
 async function GetData() {
   try {
-    let res = await fetch(`https://www.balldontlie.io/api/v1/players`);
+    let res = await fetch(`https://www.balldontlie.io/api/v1/players?${limit=10}`);
     let data = await res.json();
     data = data.data;
     console.log(data);

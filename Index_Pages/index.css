@@ -10,17 +10,34 @@
       width: 800px;
       font-size: large;
 }
+.mainDiv{
+      border: 1px solid white;
+      width: 1000px;
+      margin:50px auto;
+      
+}
+#search{
+      width: 250px;
+      height: 40px;
+      text-align: center;
+      margin: auto;
+      position: absolute;
+      right: 40%;
+      font-size: large;
+}
+
+
 #container{
-      border: 1px solid blue;
+      /* border: 1px solid blue; */
       display: flex;
       flex-wrap: wrap;
       width: 1000px;
-      margin:100px auto;
+      margin:50px auto;
       gap: 25px;
       justify-content: center;
 }
 .middleDiv{
-      border: 1px solid;
+      /* border: 1px solid; */
       width: 200px;
       text-align: center;
       border-radius: 15px;
@@ -33,9 +50,26 @@
 .btn{
       padding: 10px;
       font-size: 1rem;
-      font-weight: 600px;
+      font-weight: 700px;
       border-radius: 10px;
       border: navajowhite;
       background-color: aqua;
       color: red;
+}
+
+.pagination_btn{
+      display: flex;
+      justify-content: space-between;
+      width: 300px;
+      margin: auto;
+}
+.btnPage{
+      font-size: large;
+      width: 50px;
+      padding: 5px 0px;
+      border-radius: 10px;
+      font-weight: 700;
+      background-color: aqua;
+      color: red;
+      border: navajowhite;
 }
