@@ -1,5 +1,6 @@
 let data = JSON.parse(localStorage.getItem("Player"));
 //  data=data[1]
+console.log(data)
 ShowData(data);
 
 function ShowData(data) {
@@ -14,11 +15,19 @@ function ShowData(data) {
   img.src = `${imgSrc}`;
   img.setAttribute("class", "img");
   let name = document.createElement("h3");
-  name.innerText = `${data.first_name} ${data.last_name}`;
-  let position = document.createElement("p");
-  position.innerText = `Position:-  ${data.position}`;
+  name.innerText = `Team: ${data.team.full_name}`;
   
-  div.append(img, name, position,);
+  let position = document.createElement("p");
+  position.innerText = `Abbr:-  ${data.team.abbreviation}`;
+  let conference = document.createElement("p");
+  conference.innerText = `Conference:-  ${data.team.conference}`;
+  let division = document.createElement("p");
+  division.innerText = `Division:-  ${data.team.division}`;
+  
+  let city = document.createElement("p");
+  city.innerText = `City:-  ${data.team.city}`;
+  
+  div.append(img, name, position,conference,division,city);
   container.append(div);
   
 }
