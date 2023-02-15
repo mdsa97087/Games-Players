@@ -26,7 +26,7 @@ function ShowData(data) {
     img.src = `${imgSrc}`;
     img.setAttribute("class", "img");
     let name = document.createElement("h3");
-    name.innerText = `Name:- ${el.first_name}`;
+    name.innerText = `${el.first_name} ${el.last_name}`;
     let position = document.createElement("p");
     position.innerText = `Position:-  ${el.position}`;
     let btn = document.createElement("button");
