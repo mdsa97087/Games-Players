@@ -8,14 +8,16 @@ function ShowData(data) {
   container.innerHTML = null;
 
   let div = document.createElement("div");
-  div.setAttribute("class", "middleDiv");
+  div.setAttribute("class", "Game_middleDiv");
   let imgSrc =
     "https://images.pexels.com/photos/9002742/pexels-photo-9002742.jpeg?auto=compress&cs=tinysrgb&w=600";
   let img = document.createElement("img");
   img.src = `${imgSrc}`;
   img.setAttribute("class", "img");
-  let name = document.createElement("h3");
-  name.innerText = `Team: ${data.team.full_name}`;
+  let name = document.createElement("h1");
+    name.innerText = `Name:- ${data.first_name} ${data.last_name}`;
+  let full_name = document.createElement("h3");
+  full_name.innerText = `Team: ${data.team.full_name}`;
   
   let position = document.createElement("p");
   position.innerText = `Abbr:-  ${data.team.abbreviation}`;
@@ -26,8 +28,8 @@ function ShowData(data) {
   
   let city = document.createElement("p");
   city.innerText = `City:-  ${data.team.city}`;
-  
-  div.append(img, name, position,conference,division,city);
+
+  div.append(img,name, full_name, position,conference,division,city);
   container.append(div);
   
 }
